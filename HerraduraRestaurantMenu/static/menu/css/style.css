@@ -1,0 +1,78 @@
+.logo {
+    margin-bottom: 5px;
+    width:40px;
+}
+
+.cart-icon {
+    margin-bottom: 5px;
+    width:40px;
+
+}
+
+.login-icon {
+    margin-bottom: 5px;
+    width:40px;
+    margin-left: 15px;
+    background: white;
+}
+
+.home {
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/pexels-vidalbalielojrfotografia-2337842.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.pizzasmenu {
+    text-align: center;
+    margin: 50px;
+}
+
+.lasagnasmenu {
+    text-align: center;
+    margin: 50px;
+}
+
+.imagenes {
+    width: 210px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+.orders {
+    position: relative;
+    top: 100px;
+    line-height: 200%;
+}
+
+.deleteb {
+    position: absolute;
+    right: 30px;
+    color: white;
+    height: 20px;
+    padding-bottom: 3px;
+    background-color: red;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.deleteb:hover{
+    background-color: rgb(232, 162, 162);
+}
+
+li {
+    display: flex;
+}
+
+#id_username, #id_email, #id_password1, #id_password2  {
+    border-radius: 10px;
+}

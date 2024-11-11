@@ -1,0 +1,17 @@
+Título: 3 Herraduras - Tienda Virtual de Pizzas y Lasagnas
+
+Introducción: 3 Herraduras es un restaurante que se especializa en ofrecer platos principales como pizzas y lasagnas. Para aumentar la eficiencia en la venta de nuestros productos y mejorar la experiencia del cliente, estamos creando una tienda virtual que permita recibir pedidos automáticamente y agilizar el proceso de venta y documentación.
+
+Lógica del negocio:
+
+Categorización de productos: La tienda virtual se organizará por categorías, con opciones de búsqueda y filtrado para facilitar la navegación y la selección de productos. Las categorías incluirán "Pizzas" y "Lasagnas".
+
+Descripción de productos: Cada producto tendrá una descripción que incluya: ingredientes, tamaño y precio.
+
+Sistema de pedido: Los clientes podrán seleccionar los productos que deseen y agregarlos a su carrito de compras. Al finalizar el proceso de pago, el sistema enviará automáticamente el pedido al restaurante para su preparación.
+
+Análisis de ventas: La tienda virtual proporcionará información detallada sobre las ventas, lo que permitirá a 3 Herraduras identificar tendencias y oportunidades para mejorar la oferta de productos y optimizar la producción.
+
+Con esta tienda virtual, 3 Herraduras puede mejorar la experiencia del cliente, aumentar la eficiencia en la venta de productos y optimizar los procesos de producción y entrega.
+
+(En Proceso)

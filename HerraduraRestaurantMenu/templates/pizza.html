@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+
+{% load static %}
+
+{% block title %} Menu {% endblock %}
+
+{% block content %}
+
+    <div class="pizzasmenucontainer>">
+        <div class="row text-center">
+            <div class="col-md-8 text-center">
+                <h2 class="pizzasmenu"> Our Pizzas </h2>
+                <div class="row">
+                    {% for pizza in pizzas %}
+                    <div class="col-md-4 p-4">
+                        <img src=" {{ pizza.PImage}}" class="imagenes">
+                        <h4 class="pt-3" id = "pizza{{pizza.id}}"> {{ pizza.name }}</h4>
+                        <div class="formulario-en-linea">
+                            <label class="etiqueta-check">
+                                <input class="input-check" type="radio" name = "pizza{{pizza.id}}" value="{{pizza.priceS}}">
+                                S: {{pizza.priceS}} $
+                            </label>
+                        </div>
+                        <div class="formulario-en-linea">
+                            <label class="etiqueta-check">
+                                <input class="input-check" type="radio" name = "pizza{{pizza.id}}" value="{{pizza.priceM}}">
+                                M: {{pizza.priceM}} $
+                            </label>
+                        </div>
+                        <div class="formulario-en-linea">
+                            <label class="etiqueta-check">
+                                <input class="input-check" type="radio" name = "pizza{{pizza.id}}" value="{{pizza.priceL}}">
+                                L: {{pizza.priceL}} $
+                            </label>
+                        </div>
+                        <div>
+                            <button class="btn-info mt-3" onclick= "addPizza('{{pizza.id}}')"> Add to Cart </button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-4 orders">
+                <div class="bg-dark p-4 rounded text-light">
+                    <h2 class="text-center">Order List</h2>
+                    <ul id="pcart"></ul>
+                    <h4 id="ptotal">Total: 0 $</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static '/menu/js/orders.js' %}"></script>
+{% endblock %}

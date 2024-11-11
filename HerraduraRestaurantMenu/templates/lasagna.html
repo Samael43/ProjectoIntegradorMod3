@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+
+{% load static %}
+
+{% block title %} Menu {% endblock %}
+
+{% block content %}
+
+    <div class="lasagnasmenucontainer>">
+        <div class="row"> 
+            <div class="col-md-8 text-center">
+                <h2 class="lasagnasmenu"> Our Lasagnas </h2>
+                <div class="row">
+                    {% for lasagna in lasagnas %}
+                    <div class="col-md-4 p-4">
+                        <img src=" {{ lasagna.LImage}}" class="imagenes">
+                        <h4 class="pt-3" id = "lasa{{lasagna.id}}"> {{ lasagna.name }}</h4>
+                        <div class="formulario-en-linea">
+                            <label class="etiqueta-check">
+                                <input class="input-check" type="radio" name = "lasa_{{lasagna.id}}" value="{{lasagna.priceS}}">
+                                S: {{lasagna.priceS}} $
+                            </label>
+                        </div>
+                        <div class="formulario-en-linea">
+                            <label class="etiqueta-check">
+                                <input class="input-check" type="radio" name = "lasa_{{lasagna.id}}" value="{{lasagna.priceM}}">
+                                M: {{lasagna.priceM}} $
+                            </label>
+                        </div>
+                        <div class="formulario-en-linea">
+                            <label class="etiqueta-check">
+                                <input class="input-check" type="radio" name = "lasa_{{lasagna.id}}" value="{{lasagna.priceL}}">
+                                L: {{lasagna.priceL}} $
+                            </label>
+                        </div>
+                        <div>
+                            <button class="btn-info mt-3" onclick= "addLasagna('{{lasagna.id}}')"> Add to Cart</button>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-4 orders">
+                <div class="bg-dark p-4 rounded text-light">
+                    <h2 class="text-center">Order List</h2>
+                    <ul id="lcart"></ul>
+                    <h4 id="ltotal">Total: 0 $</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static '/menu/js/lasagnas.js' %}"></script>
+{% endblock %}
